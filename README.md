@@ -1,103 +1,103 @@
-# OldSkool - Bootstrap 5 HTML Responsive Template
+# Short and Hat - Premium Fashion E-commerce
 
 ## Overview
-OldSkool is a modern & flexible responsive HTML Bootstrap 5 template with customizable card listings on the category page and an excellent product display on the individual product page. It's the perfect starting point for any fashion retail website, and the template's clean and minimal design means it's easy to modify and painless to integrate with your custom Ecommerce application. And above all, it's free!
+Short and Hat is a premium fashion e-commerce platform specializing in stylish shorts and hats for the modern individual. Our online store offers a curated selection of high-quality, fashion-forward pieces that combine comfort with contemporary style.
 
-<strong><a href="https://oldskool-html-bootstrap.vercel.app/">View Demo</a> | <a href="https://github.com/PixelRocket-Shop/oldskool-html-bootstrap/archive/main.zip">Download ZIP</a></strong>
+<strong><a href="#">Visit Store</a> | <a href="#">Shop Now</a></strong>
 
-![Bootstrap 5 Responsive HTML Fashion Store Template](https://pixelrocket-public-assets.s3.eu-west-2.amazonaws.com/github-assets/oldskool-html/homepage-medium.jpg "OldSkool | Responsive Bootstrap 5 Ecommerce Template")
+![Short and Hat - Premium Fashion E-commerce](src/assets/images/hero/hero-full.jpg "Short and Hat | Premium Fashion E-commerce")
 
 ## Table of contents
 
-- [Requirements](#requirements)
-- [Quick Start](#quick-start)
-- [Template Pages](#template-pages)
-- [Demo Link](#demo-link)
-- [Template Key Features](#template-key-features)
-- [Template File Structure](#template-file-structure)
-- [Handlebars](#handlebars)
-- [Template JSON Data](#template-json-data)
-- [Customise Template Styles](#customise-template-styles)
-- [Create New Pages](#create-new-pages)
-- [Bootstrap Documentation](#bootstrap-documentation)
-- [Credits](#credits)
+- [About Us](#about-us)
+- [Our Collections](#our-collections)
+- [Key Features](#key-features)
+- [File Structure](#file-structure)
+- [Getting Started](#getting-started)
+- [Technologies Used](#technologies-used)
 - [Contact Us](#contact-us)
 
 
-## Requirements
-If you do not intend to work with the template source code (and that means you will not be compiling it or running the Webpack dev server), you do not need to install anything. You can simply navigate to the dist folder and start editing the files.
-
-Most developers will be editing the source code and will also be running Webpack to recompile the template files. If that's the case, then ensure that you have Node.js installed. [You can download it from here](https://nodejs.org/en/download/)
+## About Us
+Short and Hat was born from a passion for contemporary fashion and a commitment to quality. We believe that great style starts with the perfect fit and exceptional materials. Our collections are carefully curated to bring you the latest trends while maintaining timeless appeal.
 
 
-## Quick Start
-- [Download the latest release](https://github.com/PixelRocket-Shop/oldskool-html-bootstrap/archive/main.zip) OR clone the repo: `git clone https://github.com/PixelRocket-Shop/oldskool-html-bootstrap.git`
-- Install Node.js if you don't already have it on your system.
-- Open the project root in your command line.
-- run `npm install` in your command line.
-- run `npm start` to start Webpack devserver.
-- if you want to recompile the template files (which output to the dist folder), run `npm run build`
+## Our Collections
+
+### Shorts Collection
+- **Casual Shorts**: Perfect for everyday comfort
+- **Athletic Shorts**: Designed for performance and style
+- **Designer Shorts**: Premium styles for the fashion-forward
+
+### Hats Collection
+- **Baseball Caps**: Classic styles with modern twists
+- **Bucket Hats**: Trendy and practical
+- **Dad Hats**: Laid-back and comfortable
 
 
-## Template Pages
-The template consists of 10 pages:
+## Key Features
 
-* Homepage
-* Category page
-* Product page
-* Cart page
-* Checkout pages (3x)
-* Login page
-* Register page
-* Forgotten password page
-
-To keep code repetition to a minimum, we've used Handlebars.js as the templating engine and partials to quickly add the same code to different pages. We also use a Handlebars plugin for JSON data - this allows us to use loops and output a single HTML code block instead of repeating the same HTML.
+- **User-Friendly Navigation**: Intuitive category and product browsing
+- **Responsive Design**: Perfect shopping experience on any device
+- **Secure Checkout**: Multiple payment options for your convenience
+- **Product Reviews**: Real customer feedback and ratings
+- **Fast Shipping**: Quick delivery to your doorstep
+- **Easy Returns**: Hassle-free return policy
 
 
-## Demo Link
-[Demo URL](https://oldskool-html-bootstrap.vercel.app/)
+## Getting Started
 
-**Please note that this is an HTML template only. It does not connect to a database, and will not automatically work in a content management system (Wordpress etc). You will need to incorporate our code into your application.**
+To run the project locally:
 
-
-## Template Key Features
-
-* Homepage slideshow (using Swiper.js)
-* Built with Bootstrap 5
-* Fully responsive
-* Brand logo marquee component
-* Homepage featured categories component (using Swiper.js)
-* Instagram slideshow component (Swiper.js)
-* Category listing card showing sale badge, new product badge and sold out badge
-* Distraction-free cart and checkout pages
-* Login, register and forgotten password pages
-* Custom pagination component
-* Header Megamenu
-* Customer review component
-* Related products slideshow component
-* Offcanvas category filter display
-* Header cart drop down display
-* Slidedown search bar
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kdp-group/shortnhat.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+4. Open your browser and navigate to `http://localhost:3000`
 
 
-## Template File structure
-📁 dist - Generated version of the template. Go here if you do not want to work with the template source code. But be warned: if you customise anything in this folder directly, and then later recompile the template using webpack, unless you move the dist folder out of the template, your changes will be overridden.
+## Technologies Used
 
-📁 node_modules - Directory where NPM installs dependancies. You will not see this folder until you complete the template installation. You do not need to create this folder.
-
-📁 src - Template source code. Go here to customise your template.
-
-📁 src/assets - Template assets such as CSS, JS, Images etc.
-
-📁 src/data - Template JSON Data files. We use these JSON files to make your job easier to insert content into the template. 
-
-📁 src/html - Template pages. Go here to edit existing pages or add new pages.
-
-📁 src/partials - Handlebars partial templates. 
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Styling**: Bootstrap 5, SASS
+- **Build Tools**: Webpack, Babel
+- **Version Control**: Git, GitHub
+- **Performance**: Optimized assets for fast loading
 
 
-## Handlebars
-Handlebars is a template engine that allows us to keep our template source code as organised and as clean as possible. It cuts down on code duplication and through the use of helper functions, allows template developers to very quickly output large amounts of data with minimal code. [You can read more about it here](https://handlebarsjs.com).
+## File Structure
+
+```
+shortnhat/
+├── src/                    # Source files
+│   ├── assets/            # Static assets
+│   │   ├── css/          # Compiled CSS
+│   │   ├── js/           # JavaScript files
+│   │   └── images/       # Image assets
+│   ├── html/             # HTML templates
+│   └── partials/         # Reusable components
+├── dist/                 # Production build
+└── package.json          # Project configuration
+```
+
+
+## Contact Us
+
+Have questions or need assistance? We'd love to hear from you!
+
+- **Email**: support@shortandhat.com
+- **Phone**: (555) 123-4567
+- **Address**: 123 Fashion Street, Style City, 10001
+
+Follow us on social media for the latest updates and promotions!
 
 We use Handlebars for two main reasons: firstly, the use of Handlebars partials allows us to reference the same file in multiple HTML files and means that you only have to edit the code from a single source. If you're used to working with React or Vue, this would be the same as referencing a component. Secondly, the use of JSON data for our dummy catalogue data keeps our template code clean. We can easily output 10 dummy products on our listing page by outputting a basic Handlebars loop.
 
@@ -164,6 +164,18 @@ This is the main entry point for all other SASS/CSS files.
 ## Create New Pages
 To create a new page, navigate in your code editor to: src/html. To make it easier to get the correct HTML in place, clone an existing page. Rename the newly-created file to whatever URL you require. And that's it. You are now free to open the new page with your code editor, make your changes, and then save the file. Quit Webpack devserver and restart it for the page to show up.
 
+
+## Join Our Community
+
+Be the first to know about new arrivals, exclusive offers, and style tips. Sign up for our newsletter today and receive 10% off your first order!
+
+## Quality Guarantee
+
+At Short and Hat, we stand behind the quality of our products. If you're not completely satisfied with your purchase, we offer a 30-day return policy. Our customer service team is always ready to assist you with any questions or concerns.
+
+## Sustainability
+
+We're committed to sustainable fashion practices. Our products are made with eco-friendly materials and ethical manufacturing processes. Join us in making a positive impact on the environment while looking your best.
 
 ## Bootstrap Documentation
 Bootstrap already has a comprehensive documentation site that will guide you in setting up and using all default Bootstrap features. Bootstrap 5 is fully integrated to our template's source code. Please refer to Bootstrap's doc site first for any default Bootstrap features: [Visit Bootstrap's Doc Site](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
