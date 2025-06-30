@@ -1,0 +1,47 @@
+<!-- Start Newsletter Modal -->
+<div class="modal fade"
+     id="newsletterModal"
+     tabindex="-1"
+     aria-labelledby="newsletterModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <button type="button"
+                class="btn btn-link text-decoration-none text-secondary text-dark-hover position-absolute end-0 top-0 p-3 z-index-10"
+                data-bs-dismiss="modal"
+                aria-label="Close"><i class="ri-close-fill"></i></button>
+            <div class="row g-0">
+                <!-- Newsletter Image -->
+                <div class="col-md-6 d-none d-md-block">
+                    <img src="/assets/images/banners/newsletter.jpg" alt="Newsletter" class="img-fluid h-100 object-fit-cover">
+                </div>
+                <!-- Newsletter Content -->
+                <div class="col-12 col-md-6">
+                    <div class="p-4 p-md-5 d-flex flex-column justify-content-center h-100">
+                        <h3 class="mb-3 fw-bold">Sign Up for Newsletter and get 5% off!</h3>
+                        <p class="mb-4 text-muted">The remainder of our journey to Thark was uneventful. We were twenty days.</p>
+                        
+                        <form id="newsletter-form" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="newsletter-email" placeholder="Your e-mail address" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address.
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-dark w-100 mb-3">Subscribe Now</button>
+                            
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="newsletter-consent" checked>
+                                <label class="form-check-label small text-muted" for="newsletter-consent">
+                                    I would like to receive news and special offers.
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Newsletter Modal -->

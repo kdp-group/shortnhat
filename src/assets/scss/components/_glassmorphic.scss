@@ -1,0 +1,373 @@
+// Enhanced Glassmorphic effect for auth pages
+.login-page, .register-page {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('../images/banners/auth-bg.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+      rgba(111, 70, 255, 0.3), 
+      rgba(25, 184, 162, 0.3)
+    );
+    backdrop-filter: blur(5px);
+    z-index: 0;
+  }
+  .card.transparent {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(15px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 
+      0 8px 32px 0 rgba(31, 38, 135, 0.15),
+      0 1px 3px rgba(0, 0, 0, 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-dark {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    .text-muted {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+
+    .border-light {
+      border-color: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .form-floating {
+      .form-control {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-color: rgba(255, 255, 255, 0.2) !important;
+        color: white;
+        
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+        }
+
+        &:focus {
+          background: rgba(255, 255, 255, 0.15) !important;
+          border-color: rgba(255, 255, 255, 0.3) !important;
+          box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1) !important;
+        }
+      }
+
+      label {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    .btn-dark {
+      background: rgba(255, 255, 255, 0.15) !important;
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      color: white;
+      backdrop-filter: blur(5px);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.25) !important;
+        border-color: rgba(255, 255, 255, 0.4) !important;
+      }
+    }
+
+    .btn-outline-dark {
+      border-color: rgba(255, 255, 255, 0.3) !important;
+      color: white;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-color: rgba(255, 255, 255, 0.4) !important;
+      }
+    }
+
+    a:not(.btn) {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: white;
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    .form-check-input {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+
+      &:checked {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    .form-check-label {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+  // Enhanced form controls
+  .form-floating {
+    background: transparent;
+    
+    .form-control {
+      background: rgba(255, 255, 255, 0.5) !important;
+      border-color: rgba(255, 255, 255, 0.2) !important;
+      backdrop-filter: blur(5px) !important;
+      height: calc(3.5rem + 2px);
+      line-height: 1.25;
+      transition: all 0.3s ease;
+
+      &:focus {
+        background: rgba(255, 255, 255, 0.7) !important;
+        border-color: rgba(111, 70, 255, 0.2) !important;
+        box-shadow: 0 0 0 0.25rem rgba(111, 70, 255, 0.1) !important;
+      }
+
+      &:not(:placeholder-shown) {
+        ~ label {
+          opacity: 0.65;
+          transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+        }
+      }
+
+      &.is-invalid {
+        background: rgba(255, 255, 255, 0.7) !important;
+        border-color: rgba(220, 53, 69, 0.3) !important;
+        box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.1) !important;
+
+        &:focus {
+          border-color: rgba(220, 53, 69, 0.5) !important;
+          box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.15) !important;
+        }
+      }
+
+      &.is-valid {
+        background: rgba(255, 255, 255, 0.7) !important;
+        border-color: rgba(25, 184, 162, 0.3) !important;
+        box-shadow: 0 0 0 0.25rem rgba(25, 184, 162, 0.1) !important;
+
+        &:focus {
+          border-color: rgba(25, 184, 162, 0.5) !important;
+          box-shadow: 0 0 0 0.25rem rgba(25, 184, 162, 0.15) !important;
+        }
+      }
+    }
+
+    label {
+      padding: 1rem 1.25rem;
+      color: rgba(0, 0, 0, 0.6);
+      font-weight: 500;
+    }
+  }
+
+  .invalid-feedback {
+    color: rgba(220, 53, 69, 0.9);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+
+  .valid-feedback {
+    color: rgba(25, 184, 162, 0.9);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+
+  // Form elements
+  .form-check-input {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(31, 38, 135, 0.2);
+    
+    &:checked {
+      background-color: #6f46ff;
+      border-color: #6f46ff;
+    }
+
+    &.is-invalid {
+      background-color: rgba(220, 53, 69, 0.1);
+      border-color: rgba(220, 53, 69, 0.3);
+
+      &:checked {
+        background-color: #dc3545;
+        border-color: #dc3545;
+      }
+    }
+
+    &.is-valid {
+      background-color: rgba(25, 184, 162, 0.1);
+      border-color: rgba(25, 184, 162, 0.3);
+
+      &:checked {
+        background-color: #19b8a2;
+        border-color: #19b8a2;
+      }
+    }
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;    &.btn-dark {
+      background: linear-gradient(45deg, #6f46ff, #19b8a2) !important;
+      border: none !important;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(111, 70, 255, 0.2);
+      }
+    }
+
+    &.btn-outline-dark {
+      background: rgba(255, 255, 255, 0.1) !important;
+      backdrop-filter: blur(5px) !important;
+      border-color: rgba(17, 24, 39, 0.2) !important;
+      font-weight: 500;
+
+      &:hover {
+        background: rgba(17, 24, 39, 0.05) !important;
+        transform: translateY(-2px);
+      }
+    }
+
+    &.btn-facebook {
+      background: rgba(59, 89, 152, 0.1);
+      color: #3b5998;
+      border: 1px solid rgba(59, 89, 152, 0.2);
+      font-weight: 500;
+
+      &:hover {
+        background: rgba(59, 89, 152, 0.2);
+        transform: translateY(-2px);
+      }
+    }
+
+    &.btn-twitter {
+      background: rgba(0, 172, 238, 0.1);
+      color: #00acee;
+      border: 1px solid rgba(0, 172, 238, 0.2);
+      font-weight: 500;
+
+      &:hover {
+        background: rgba(0, 172, 238, 0.2);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  a:not(.btn) {
+    color: #6f46ff;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    
+    &:hover {
+      color: #19b8a2;
+    }
+  }
+
+  // Animated blobs
+  .blob {
+    position: absolute;
+    filter: blur(40px);
+    opacity: 0.7;
+    animation: blob-animation 8s ease-in-out infinite;
+    transform-origin: center;
+    transition: all 0.3s ease;
+  }
+
+  @keyframes blob-animation {
+    0% {
+      transform: scale(1) rotate(0deg);
+      border-radius: 38% 62% 64% 36% / 42% 48% 52% 58%;
+    }
+    33% {
+      transform: scale(1.1) rotate(120deg);
+      border-radius: 45% 55% 62% 38% / 53% 47% 53% 47%;
+    }
+    66% {
+      transform: scale(0.9) rotate(240deg);
+      border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+      border-radius: 38% 62% 64% 36% / 42% 48% 52% 58%;
+    }
+  }
+
+  // Enhanced social buttons
+  .social-login {
+    .btn {
+      transition: all 0.3s ease;
+      opacity: 0.9;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      
+      &:hover {
+        transform: translateY(-2px);
+        opacity: 1;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  // Mobile responsiveness
+  @include media-breakpoint-down(md) {
+    .card.transparent {
+      margin: 1rem;
+      padding: 1.5rem !important;
+    }
+
+    .form-floating {
+      margin-bottom: 1rem;
+
+      .form-control {
+        height: calc(3.2rem + 2px);
+      }
+
+      label {
+        padding: 0.8rem 1rem;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      margin-bottom: 0.5rem;
+      padding: 0.75rem 1rem;
+    }
+
+    .social-login {
+      flex-direction: column;
+      
+      .btn {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+  }
+
+  // Cross-browser backdrop-filter fallback
+  @supports not (backdrop-filter: blur(20px)) {
+    .card.transparent {
+      background: rgba(255, 255, 255, 0.95) !important;
+    }
+
+    .form-control {
+      background: rgba(255, 255, 255, 0.9) !important;
+    }
+  }
+}

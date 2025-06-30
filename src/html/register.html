@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> (config config.partials.head) title=config.defaultPageTitle }}
+
+<body class="{{ config.classes.body }} auth-page">
+    <!-- Main Content -->
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Logo -->
+            <div class="auth-logo">
+                {{> logo/logo-icon }}
+            </div>
+
+            <!-- Header -->
+            <div class="auth-header">
+                <h1>Create Account</h1>
+                <p>Join our community of fashion enthusiasts</p>
+            </div>
+
+            <!-- Social Login -->
+            <div class="social-login">
+                <button type="button" class="btn btn-social">
+                    <i class="ri-google-fill"></i>
+                    Continue with Google
+                </button>
+            </div>
+
+            <div class="divider">
+                <span>or create with email</span>
+            </div>
+
+            <!-- Register Form -->
+            <form action="{{webRoot}}/index.html" method="POST">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="register-fname" placeholder="First name" required>
+                            <label for="register-fname">First name</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="register-lname" placeholder="Last name" required>
+                            <label for="register-lname">Last name</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="register-email" placeholder="name@example.com" required>
+                    <label for="register-email">Email address</label>
+                </div>
+
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="register-password" 
+                           placeholder="Choose a secure password" 
+                           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                           title="Must contain at least one number, uppercase and lowercase letter, and be at least 8 characters"
+                           required>
+                    <label for="register-password">Password</label>
+                    <small class="text-white-50 mt-1 d-block">At least 8 characters with a number, uppercase and lowercase letter</small>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="accept-terms" required>
+                    <label class="form-check-label" for="accept-terms">
+                        I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-auth">
+                    Create Account
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="{{webRoot}}/login.html">Sign in instead</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme JS -->
+    {{> footer/scripts }}
+</body>
+</html>
